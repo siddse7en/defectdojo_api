@@ -69,7 +69,6 @@ def create_findings(host, api_key, user, product_id, file, scanner, engagement_i
     if engagement_id == None:
         start_date = datetime.now()
         end_date = start_date+timedelta(days=180)
-        #users = dd.list_users("admin")
         users = dd.list_users(user,1)
         user_id = None
         if users.success:
@@ -79,6 +78,8 @@ def create_findings(host, api_key, user, product_id, file, scanner, engagement_i
 
     # Upload the scanner export
     #dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    
 
     print "Uploading scanner data."
     date = datetime.now()
